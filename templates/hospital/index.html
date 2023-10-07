@@ -1,0 +1,85 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images\Banner.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 7rem 4rem;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: left;
+      margin-top: -12px;
+      margin-bottom: 1.5rem;
+    }
+
+
+    .alert {
+      margin: 0px;
+    }
+
+    .book{
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    .btn:hover{
+        background-color:#345e9e !important;
+    }
+
+    .glow {
+      font-size: 50px;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eee, 0 0 30px #2312e3, 0 0 40px #130dd7, 0 0 50px #0f1ce6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+  </style>
+</head>
+<br>
+<br>
+
+<div class="jumbotron" style="margin-bottom: 0px;margin-top: -47px;">
+  <br>
+  <h5 class="display-3 glow">We Are More Than Just A Hospital</h5>
+  <br><br>
+  <h5>A centre of holistic and qualitative healthcare for a fulfilling <br> healing experience.<h5>
+  <br><br><br>
+  <p>
+  <h3 style="color: red;">Emergency ?</h3>
+
+  <p class="book">
+    <a class="btn btn-primary btn-lg" href="/patientclick" role="button" style="padding: 0.8rem 2rem;background-color: green;">BOOK AN APPOINTMENT ></a>
+  </p>
+  <br><br>
+</div>
+
+<br><br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+
+{% endblock content %}
